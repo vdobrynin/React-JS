@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
 function App() {
+                                              // let counter;
+                                              // let counter = 5;
+  const [count, setCount] = useState(5);
+  // const [anyConst, setAnyConst] = useState(50);
+
+  const add = () => {
+                                              // counter = counter + 1;
+    setCount(count + 1);
+                                        // console.log('ADD ONE', counter);
+    // setAnyConst(Math.random());
+  };
+
+  const minus = () => {
+                                          //counter = counter - 1;
+    setCount(count - 1);
+                                      // console.log('MINUS ONE', counter);
+    // setAnyConst(Math.random());
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={add}>Add One</button>
+                                            {/*{} {counter} {}*/}
+       {} {count} {}
+       {/*{anyConst}*/}
+
+      <button onClick={minus}>Minus One</button>
     </div>
   );
 }
